@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+.glide h2,
+.glide p {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide1 {
+    background-image: url(../img/chepe-ferrocarril-chihuahua-pacifico.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+.slide2 {
+    background-image: url(../img/airbnb.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
