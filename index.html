@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- GRID CSS -->
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="scss/main.css">
     <!-- Required Core Stylesheet -->
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
 
     <!-- Optional Theme Stylesheet -->
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <title>Visita Los Mochis</title>
+    <!-- FONTS -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -27,18 +30,38 @@
                         <div class="glide__track" data-glide-el="track">
                             <ul class="glide__slides">
                                 <li class="glide__slide">
-                                    <div class="slide1">
-                                        <h2>Vive la experiencia</h2>
-                                        <p class="captionSlider">Viaja en Ferry, tren y conoce Los Mochis</p>
+                                    <div class="slider slide1">
+                                        <div class="slider-title">
+                                            <video autoplay loop muted src="./img/slider/airbnbLosMochis.MP4" class="videoMobile"></video>
+                                            <!-- LOGO PROYECTO M -->
+                                            <img src="./img/proyectoM_logo_aribnbLosMochis-02.svg" class="logo white">
+                                            <h2 class="captionSlider positionCaption">Vive el mar de cortés</h2>
+                                            <p class="captionSlider positionCaption">Recorre las Barrancas del Cobre y llega en Ferry hasta La Paz</p>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="glide__slide">
-                                    <div class="slide2">
-                                        <h2>Viaja a Los Mochis</h2>
+                                    <div class="slider slide2">
+                                        <div class="slider-title">
+                                            <!-- LOGO PROYECTO M -->
+                                            <img src="./img/proyectoM_logo_aribnbLosMochis-02.svg" class="logo white">
+                                            <h2 class="positionCaption">Conoce Los Mochis</h2>
+                                            <p class="positionCaption">Come mariscos en El Maviri, visita El Fuerte y prepárate para zarpar</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="slider slide3">
+                                        <div class="slider-title">
+                                            <!-- LOGO PROYECTO M -->
+                                            <img src="./img/proyectoM_logo_aribnbLosMochis-02.svg" class="logo white">
+                                            <h2 class="positionCaption">Contempla los atardeceres del pacífico</h2>
+                                            <p class="positionCaption">Una explosión de colores justo antes de iniciar la vida nocturna</p>
+                                        </div>
+
                                         <p class="captionSlider"></p>
                                     </div>
                                 </li>
-                                <li class="glide__slide">2</li>
                             </ul>
                         </div>
                     </div>
@@ -47,13 +70,27 @@
             </div>
         </section>
         <!-- END:HEADER -->
+        <!-- BEGIN: CALL TO ACTION -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-around">
+                    <div class="col-lg-6 call-to-action">
+                        <h1>Reserva ahora este Airbnb<br> en Los Mochis</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: CALL TO ACTION -->
+
     </main>
 
     <!-- JS -->
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
     <script>
-        new Glide('.glide').mount()
+        new Glide('.glide', {
+            autoplay: 4000
+        }).mount()
     </script>
     <!-- END: JS-->
 </body>
