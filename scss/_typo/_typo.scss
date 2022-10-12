@@ -1,0 +1,135 @@
+/* FILE STRUCTURE
+COLORS
+MOBILE
+TABLET
+DESKTOP*/
+
+
+/* END:GLOBAL GRID */
+
+// COLORS
+.text-white {
+    color: rgb(209, 230, 240);
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* ---------------MOBILE--------------- */
+
+
+/* ------------FONTS----------- */
+
+@media screen and (max-width:600px) {
+    h1 {
+        font-size: 1.5rem;
+        font-family: 'Merriweather', serif;
+        font-weight: medium;
+    }
+    h2 {
+        font-size: 1.35rem;
+        font-family: 'Merriweather', serif;
+        font-weight: medium;
+    }
+    h3 {
+        font-size: 30px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: medium;
+    }
+    h4 {
+        font-size: 24px;
+        font-family: "Montserrat", sans-serif;
+    }
+    h5 {
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
+    }
+    h6 {
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+    }
+    p {
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+
+/* --------------TABLETS---------------- */
+
+@media screen and (min-width:601px) and (max-width:992px) {
+    /* ------------FONTS----------- */
+    h1 {
+        font-size: 1.5rem;
+        font-family: 'Merriweather', serif;
+        font-weight: lighter;
+    }
+    h2 {
+        font-size: 1.35rem;
+        font-family: 'Merriweather', serif;
+        font-weight: lighter;
+    }
+    h3 {
+        font-size: 1.2rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: lighter;
+    }
+    h4 {
+        font-size: 26px;
+        font-family: "Montserrat", sans-serif;
+    }
+    h5 {
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
+    }
+    h6 {
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+    }
+    p {
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+
+/* --------------Desktop---------------- */
+
+
+/* -----------FONTS------------ */
+
+@media screen and (min-width:993px) {
+    h1 {
+        font-size: 2.5rem;
+        font-family: 'Merriweather', serif;
+        font-weight: 700;
+    }
+    h2 {
+        font-size: 2rem;
+        font-family: 'Merriweather', serif;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 24px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+    }
+    h4 {
+        font-size: 24px;
+        font-family: "Montserrat", sans-serif;
+    }
+    h5 {
+        font-size: 22px;
+        font-family: "Montserrat", sans-serif;
+    }
+    h6 {
+        font-size: 18px;
+        font-family: "Montserrat", sans-serif;
+    }
+    p {
+        font-size: 22px;
+        font-family: "Montserrat", sans-serif;
+    }
+}

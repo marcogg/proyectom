@@ -8,6 +8,25 @@
   font-family: "Merriweather", serif;
 }
 
+a {
+  color: #1D2025;
+  text-decoration: none;
+}
+a span {
+  text-decoration: underline;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #1D2025;
+  font-size: 14px;
+}
+
+body {
+  background: #F4E2D2;
+}
+
 .glide h2,
 .glide p {
   color: white;
@@ -26,10 +45,17 @@
   background-position: center left;
 }
 
+@media screen and (min-width: 768px) {
+  .slider {
+    height: 60vh;
+    background-position: center left;
+  }
+}
 .slide1 {
   position: relative;
   z-index: 1;
-  max-height: 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 .videoMobile {
@@ -41,7 +67,6 @@
   left: 0;
   bottom: 0;
   z-index: 1;
-  transform: scaleY(1.5);
 }
 
 .logo {
@@ -58,12 +83,20 @@
 
 .slide2 {
   background-image: url(../../img/terraza-LosMochis.jpg);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .slide3 {
   background-image: url(../../img/airbnb-LosMochis.jpg);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.slide4 {
+  background-image: url(../../img/airbnb-los-mochis-sinaloa.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .slider-title h2 {
@@ -81,36 +114,65 @@
 }
 
 .call-to-action {
-  background: white;
-  border-radius: 30px;
   padding: 3% 5%;
-  max-width: 800px;
+  width: 100%;
+  height: 200px;
   position: relative;
-  top: -170px;
+  top: -50px;
   text-align: center;
+  color: #1d2025;
+  background-image: url(../../img/elipse-bottom.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.call-to-action h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-size: 24px;
+}
+.call-to-action h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+.call-to-action hr {
+  width: 300px;
+  border: #1D2025 solid 1px;
+  display: block;
+  margin: 1% auto;
 }
 
 @media screen and (max-width: 768px) {
   .call-to-action {
-    padding: 5%;
-    width: 80%;
+    padding: 2%;
+    width: 100%;
     position: relative;
     top: -70px;
     text-align: center;
   }
 }
-.glassphormism {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.2px);
-  -webkit-backdrop-filter: blur(8.2px);
-  border: 1px solid rgba(255, 255, 255, 0.64);
-  max-width: 800px;
-  position: relative;
-  top: -70px;
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 4%;
   text-align: center;
-  padding: 2% 0;
+  background: url(../../img/elipse.svg);
+  position: relative;
+  bottom: -50px;
+  z-index: 5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.logo.main {
+  width: 30%;
+  margin-bottom: 30px;
 }
 
 /* FILE STRUCTURE
@@ -126,7 +188,10 @@
 }
 
 .container {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  justify-content: center;
 }
 
 .container-full {
@@ -242,37 +307,6 @@
   .col-12 {
     width: 100%;
   }
-  /* ------------FONTS----------- */
-  h1 {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: medium;
-  }
-  h2 {
-    font-size: 32px;
-    font-family: "Merriweather", serif;
-    font-weight: medium;
-  }
-  h3 {
-    font-size: 24px;
-    font-family: "Merriweather", serif;
-    font-weight: medium;
-  }
-  h4 {
-    font-size: 24px;
-    font-family: "Merriweather", serif;
-  }
-  h5 {
-    font-size: 20px;
-    font-family: "Merriweather", serif;
-  }
-  h6 {
-    font-size: 18px;
-    font-family: "Merriweather", serif;
-  }
-  p {
-    font-size: 16px;
-  }
 }
 /* --------------TABLETS---------------- */
 @media screen and (max-width: 992px) {
@@ -312,34 +346,6 @@
   .col-md-12 {
     width: 100%;
   }
-  /* ------------FONTS----------- */
-  h1 {
-    font-size: 1.5rem;
-    font-family: "Merriweather", serif;
-    font-weight: lighter;
-  }
-  h2 {
-    font-size: 1.35rem;
-    font-family: "Merriweather", serif;
-    font-weight: lighter;
-  }
-  h3 {
-    font-size: 1.2rem;
-    font-family: "Merriweather", serif;
-    font-weight: lighter;
-  }
-  h4 {
-    font-size: 26px;
-    font-family: "Merriweather", serif;
-  }
-  h5 {
-    font-size: 20px;
-    font-family: "Merriweather", serif;
-  }
-  h6 {
-    font-size: 18px;
-    font-family: "Merriweather", serif;
-  }
 }
 /* --------------Desktop---------------- */
 @media screen and (min-width: 993px) {
@@ -378,37 +384,6 @@
   }
   .col-lg-12 {
     width: 100%;
-  }
-  /* -----------FONTS------------ */
-  h1 {
-    font-size: 3.5rem;
-    font-family: "Merriweather", serif;
-    font-weight: 700;
-  }
-  h2 {
-    font-size: 3rem;
-    font-family: "Merriweather", serif;
-    font-weight: 700;
-  }
-  h3 {
-    font-size: 24px;
-    font-family: "Merriweather", serif;
-    font-weight: 700;
-  }
-  h4 {
-    font-size: 24px;
-    font-family: "Merriweather", serif;
-  }
-  h5 {
-    font-size: 22px;
-    font-family: "Merriweather", serif;
-  }
-  h6 {
-    font-size: 18px;
-    font-family: "Merriweather", serif;
-  }
-  p {
-    font-size: 22px;
   }
 }
 /* ----------------SPACING---------------- */
@@ -645,4 +620,124 @@
 
 .img-100 {
   width: 100%;
+}
+
+/* FILE STRUCTURE
+COLORS
+MOBILE
+TABLET
+DESKTOP*/
+/* END:GLOBAL GRID */
+.text-white {
+  color: rgb(209, 230, 240);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ---------------MOBILE--------------- */
+/* ------------FONTS----------- */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+    font-family: "Merriweather", serif;
+    font-weight: medium;
+  }
+  h2 {
+    font-size: 1.35rem;
+    font-family: "Merriweather", serif;
+    font-weight: medium;
+  }
+  h3 {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: medium;
+  }
+  h4 {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+  }
+  h5 {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+  h6 {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+  }
+  p {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+/* --------------TABLETS---------------- */
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  /* ------------FONTS----------- */
+  h1 {
+    font-size: 1.5rem;
+    font-family: "Merriweather", serif;
+    font-weight: lighter;
+  }
+  h2 {
+    font-size: 1.35rem;
+    font-family: "Merriweather", serif;
+    font-weight: lighter;
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+  }
+  h4 {
+    font-size: 26px;
+    font-family: "Montserrat", sans-serif;
+  }
+  h5 {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+  h6 {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+  }
+  p {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+/* --------------Desktop---------------- */
+/* -----------FONTS------------ */
+@media screen and (min-width: 993px) {
+  h1 {
+    font-size: 2.5rem;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 2rem;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+  }
+  h5 {
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+  }
+  h6 {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+  }
+  p {
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+  }
 }/*# sourceMappingURL=main.css.map */

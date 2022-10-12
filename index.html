@@ -12,7 +12,7 @@
 
     <!-- Optional Theme Stylesheet -->
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
-    <title>Visita Los Mochis</title>
+    <title>Proyecto M - Casa Boutique AirBnB | Los Mochis</title>
     <!-- FONTS -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,14 @@
 
 <body>
     <main>
+        <section>
+            <div class="container">
+                <div class=" header">
+                    <img src="./img/logo-airbnb-los-mochis-proyecto-m.svg" class="logo main">
+                    <a href="" class="linkHeader">Reserva <span>aquí</span></a>
+                </div>
+            </div>
+        </section>
         <!-- HEADER -->
         <section>
             <div class="container">
@@ -29,24 +37,12 @@
                     <div class="glide">
                         <div class="glide__track" data-glide-el="track">
                             <ul class="glide__slides">
-                                <li class="glide__slide">
-                                    <div class="slider slide1">
-                                        <div class="slider-title">
-                                            <video autoplay loop muted src="./img/slider/airbnbLosMochis.MP4" class="videoMobile"></video>
-                                            <!-- LOGO PROYECTO M -->
-                                            <img src="./img/proyectoM_logo_aribnbLosMochis-02.svg" class="logo white">
-                                            <h2 class="captionSlider positionCaption">Vive el mar de cortés</h2>
-                                            <p class="captionSlider positionCaption">Recorre las Barrancas del Cobre y llega en Ferry hasta La Paz</p>
-                                        </div>
-                                    </div>
-                                </li>
+
                                 <li class="glide__slide">
                                     <div class="slider slide2">
                                         <div class="slider-title">
                                             <!-- LOGO PROYECTO M -->
                                             <img src="./img/proyectoM_logo_aribnbLosMochis-02.svg" class="logo white">
-                                            <h2 class="positionCaption">Conoce Los Mochis</h2>
-                                            <p class="positionCaption">Come mariscos en El Maviri, visita El Fuerte y prepárate para zarpar</p>
                                         </div>
                                     </div>
                                 </li>
@@ -55,11 +51,29 @@
                                         <div class="slider-title">
                                             <!-- LOGO PROYECTO M -->
                                             <img src="./img/proyectoM_logo_aribnbLosMochis-02.svg" class="logo white">
-                                            <h2 class="positionCaption">Contempla los atardeceres del pacífico</h2>
-                                            <p class="positionCaption">Una explosión de colores justo antes de iniciar la vida nocturna</p>
                                         </div>
 
                                         <p class="captionSlider"></p>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="slider slide4">
+                                        <div class="slider-title">
+                                            <!-- LOGO PROYECTO M -->
+                                            <img src="./img/proyectoM_logo_aribnbLosMochis-02.svg" class="logo white">
+                                        </div>
+
+                                        <p class="captionSlider"></p>
+                                    </div>
+                                </li>
+                                <li class="glide__slide">
+                                    <div class="slider slide1">
+                                        <div class="slider-title">
+                                            <video autoplay loop muted src="./img/slider/airbnbLosMochis.MP4" class="videoMobile"></video>
+                                            <!-- LOGO PROYECTO M -->
+                                            <img src="./img/proyectoM_logo_aribnbLosMochis-02.svg" class="logo white">
+
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -74,14 +88,24 @@
         <section>
             <div class="container">
                 <div class="row justify-content-around">
-                    <div class="col-lg-6 call-to-action">
-                        <h1>Reserva ahora este Airbnb<br> en Los Mochis</h1>
+                    <div class="call-to-action">
+                        <h1>Casa vacacional en Los Mochis</h1>
+                        <hr>
+                        <h2>Disponible en AirBnB</h2>
                     </div>
                 </div>
             </div>
         </section>
         <!-- END: CALL TO ACTION -->
-
+        <!-- BEGIN: DESCRIPTION -->
+        <section>
+            <div class="container">
+                <div class="title text-white text-center">
+                    <p>Disfruta de los atardeceres del Pácífico en una casa vacacional con terraza privada y asador.</p>
+                </div>
+            </div>
+        </section>
+        <!-- END: DESCRIPTION -->
     </main>
 
     <!-- JS -->
@@ -89,7 +113,19 @@
 
     <script>
         new Glide('.glide', {
-            autoplay: 4000
+            autoplay: 4000,
+            perView: 3,
+            gap: 0,
+            breakpoints: {
+                800: {
+                    perView: 2,
+                    gap: 10
+                },
+                380: {
+                    perView: 1,
+                    gap: 10
+                }
+            }
         }).mount()
     </script>
     <!-- END: JS-->
