@@ -1,6 +1,10 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -99,6 +103,11 @@ body {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 768px) {
+  div[class^=slide] {
+    background-size: cover;
+  }
+}
 .slider-title h2 {
   text-align: center;
   text-shadow: 3px 4px 17px rgba(35, 63, 47, 0.705);
@@ -152,6 +161,18 @@ body {
     position: relative;
     top: -70px;
     text-align: center;
+    height: auto;
+    background-size: contain;
+  }
+  .call-to-action .title {
+    position: relative;
+    top: 60px;
+  }
+  .logo {
+    display: block;
+    position: absolute;
+    z-index: 50;
+    transform: translate(-50%, -50%);
   }
 }
 .header {
@@ -169,10 +190,90 @@ body {
   background-size: cover;
   background-position: bottom;
 }
+.header.fixedHeader {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  filter: drop-shadow(0 0 19px rgba(171, 87, 12, 0.61));
+  border-radius: 0 0 300% 300%;
+  z-index: 50;
+}
 
+@media screen and (max-width: 768px) {
+  .header.fixedHeader {
+    height: 50px;
+  }
+  .logo.main {
+    display: none;
+  }
+  .videoMobile {
+    width: auto;
+  }
+}
 .logo.main {
   width: 30%;
   margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #B89688;
+  border-radius: 10px;
+  padding: 10px 40px;
+  width: 300px;
+  color: #F4E2D2;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+}
+.btn.block {
+  width: 100%;
+}
+
+.card {
+  background: #FFFFFF;
+  box-shadow: 0px 8px 19px 1px rgba(171, 87, 12, 0.21);
+  border-radius: 20px;
+  padding: 8px;
+}
+
+.galeria {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+footer {
+  background-color: #1D2025;
+  margin-top: 40px;
+  padding: 40px;
+  color: #F4E2D2;
+}
+footer .info,
+footer p,
+footer h2 {
+  color: #F4E2D2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.map {
+  max-width: 600px;
+  display: block;
+  margin: 30px auto;
 }
 
 /* FILE STRUCTURE
@@ -193,6 +294,9 @@ body {
   max-width: 1920px;
   justify-content: center;
 }
+.container.asbsolute {
+  position: absolute;
+}
 
 .container-full {
   margin: 0;
@@ -212,6 +316,10 @@ body {
 
 .justify-content-evenly {
   justify-content: space-evenly;
+}
+
+.justify-content-center {
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -306,6 +414,9 @@ body {
   }
   .col-12 {
     width: 100%;
+  }
+  div[class^=col-] {
+    margin-top: 10px;
   }
 }
 /* --------------TABLETS---------------- */
@@ -636,6 +747,18 @@ DESKTOP*/
   text-align: center;
 }
 
+li {
+  font-family: "Montserrat", sans-serif;
+  list-style-type: none;
+  line-height: 2.5em;
+  display: flex;
+  align-items: center;
+  color: #1D2025;
+}
+li span {
+  margin-right: 10px;
+}
+
 /* ---------------MOBILE--------------- */
 /* ------------FONTS----------- */
 @media screen and (max-width: 600px) {
@@ -643,32 +766,39 @@ DESKTOP*/
     font-size: 1.5rem;
     font-family: "Merriweather", serif;
     font-weight: medium;
+    color: #1D2025;
   }
   h2 {
     font-size: 1.35rem;
     font-family: "Merriweather", serif;
-    font-weight: medium;
+    font-weight: 300;
+    color: #1D2025;
   }
   h3 {
     font-size: 30px;
     font-family: "Montserrat", sans-serif;
     font-weight: medium;
+    color: #1D2025;
   }
   h4 {
     font-size: 24px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
   h5 {
     font-size: 20px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
   h6 {
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
   p {
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
 }
 /* --------------TABLETS---------------- */
@@ -678,32 +808,39 @@ DESKTOP*/
     font-size: 1.5rem;
     font-family: "Merriweather", serif;
     font-weight: lighter;
+    color: #1D2025;
   }
   h2 {
     font-size: 1.35rem;
     font-family: "Merriweather", serif;
-    font-weight: lighter;
+    font-weight: 300;
+    color: #1D2025;
   }
   h3 {
     font-size: 1.2rem;
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
+    color: #1D2025;
   }
   h4 {
     font-size: 26px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
   h5 {
     font-size: 20px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
   h6 {
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
   p {
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
 }
 /* --------------Desktop---------------- */
@@ -713,31 +850,38 @@ DESKTOP*/
     font-size: 2.5rem;
     font-family: "Merriweather", serif;
     font-weight: 700;
+    color: #1D2025;
   }
   h2 {
     font-size: 2rem;
     font-family: "Merriweather", serif;
-    font-weight: 700;
+    font-weight: 300;
+    color: #1D2025;
   }
   h3 {
     font-size: 24px;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
+    color: #1D2025;
   }
   h4 {
     font-size: 24px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
   h5 {
     font-size: 22px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
   h6 {
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
   p {
     font-size: 22px;
     font-family: "Montserrat", sans-serif;
+    color: #1D2025;
   }
 }/*# sourceMappingURL=main.css.map */
